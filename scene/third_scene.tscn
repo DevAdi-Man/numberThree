@@ -1,0 +1,323 @@
+[gd_scene format=3 uid="uid://crbbko4l6xp5h"]
+
+[ext_resource type="Texture2D" uid="uid://d3h1jfnnj5dvx" path="res://assets/thirdScreen/BackgroundFour.png" id="1_4qamn"]
+[ext_resource type="Script" uid="uid://srrvf84vrliv" path="res://scene/third_scene.gd" id="1_i4w0e"]
+[ext_resource type="Texture2D" uid="uid://dp73qcnt8yhg4" path="res://assets/UI/SoundButton.png" id="2_hya0o"]
+[ext_resource type="Texture2D" uid="uid://dt2hm3t80uhnd" path="res://assets/UI/HomeButton.png" id="3_g52ua"]
+[ext_resource type="Texture2D" uid="uid://bio50us1bbb5w" path="res://assets/UI/MuteIcon.png" id="4_20l4i"]
+[ext_resource type="Texture2D" uid="uid://du3cao3jl1yc7" path="res://assets/thirdScreen/third.png" id="4_oppcp"]
+[ext_resource type="Texture2D" uid="uid://mq1s7o3ffksc" path="res://assets/thirdScreen/thirdBheemCharacter.png" id="4_v2kt0"]
+[ext_resource type="Texture2D" uid="uid://c8n015u8k2gbv" path="res://assets/thirdScreen/thirdJagguChararacter.png" id="5_gxxow"]
+[ext_resource type="Texture2D" uid="uid://bcgkcgbwegj35" path="res://assets/thirdScreen/RightSideLaddoo.png" id="5_jcqdb"]
+[ext_resource type="Texture2D" uid="uid://caxw7qroj7xa5" path="res://assets/thirdScreen/thirdDialogBox.png" id="5_yvop4"]
+[ext_resource type="Texture2D" uid="uid://legwrfjdhfh2" path="res://assets/thirdScreen/carpet.png" id="6_3v7gc"]
+[ext_resource type="Texture2D" uid="uid://m58rml5rmpjn" path="res://assets/thirdScreen/smallBanner.png" id="7_v2kt0"]
+[ext_resource type="Texture2D" uid="uid://cl73pa7axyktg" path="res://assets/thirdScreen/plate.png" id="8_jcqdb"]
+[ext_resource type="Texture2D" uid="uid://3dmjbeoxhh15" path="res://assets/thirdScreen/circleArrow.png" id="9_3v7gc"]
+[ext_resource type="Texture2D" uid="uid://ci076lugbfg1e" path="res://assets/thirdScreen/BannerFamre.png" id="12_t56vi"]
+[ext_resource type="Texture2D" uid="uid://cemjv4slr3as2" path="res://assets/thirdScreen/Banner.png" id="13_yvop4"]
+[ext_resource type="Texture2D" uid="uid://dmudt55lja4sr" path="res://assets/thirdScreen/laddoo.png" id="15_pjkk2"]
+[ext_resource type="AudioStream" uid="uid://d3pt1ba7yjlhg" path="res://assets/sound/thirdScreenFirstSound.mp3" id="17_ucdao"]
+[ext_resource type="AudioStream" uid="uid://dwax44ahntuh1" path="res://assets/sound/thirdScreenSecondSound.mp3" id="18_xuapl"]
+[ext_resource type="AudioStream" uid="uid://b3h8xsi6gdjeo" path="res://assets/sound/thirdScreenThirdSound.mp3" id="19_digdc"]
+[ext_resource type="AudioStream" uid="uid://bt3ejadw17lwx" path="res://assets/sound/button2.wav" id="20_uxg1n"]
+[ext_resource type="AudioStream" uid="uid://dnu68itabrn78" path="res://assets/sound/answer.mp3" id="21_20l4i"]
+[ext_resource type="AudioStream" uid="uid://dfmbcriuysk6u" path="res://assets/sound/wrong_answer.mp3" id="22_sidyj"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pjkk2"]
+load_path = "res://.godot/imported/laddoo.png-42e38ac1ab5c6c1f58216187a68b2c3a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i4w0e"]
+load_path = "res://.godot/imported/laddoo.png-42e38ac1ab5c6c1f58216187a68b2c3a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jvi7i"]
+load_path = "res://.godot/imported/laddoo.png-42e38ac1ab5c6c1f58216187a68b2c3a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ucdao"]
+load_path = "res://.godot/imported/laddoo.png-42e38ac1ab5c6c1f58216187a68b2c3a.ctex"
+
+[node name="ThirdScene" type="Node2D" unique_id=1619723179]
+script = ExtResource("1_i4w0e")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=301072582]
+
+[node name="Background" type="TextureRect" parent="UI" unique_id=982674200]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4qamn")
+
+[node name="SoundButton" type="TextureButton" parent="UI" unique_id=86742435]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -250.0
+offset_top = 19.0
+offset_right = -110.0
+offset_bottom = 157.0
+grow_horizontal = 0
+toggle_mode = true
+texture_normal = ExtResource("2_hya0o")
+texture_pressed = ExtResource("4_20l4i")
+
+[node name="HomeButton" type="TextureButton" parent="UI" unique_id=43669588]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -402.0
+offset_top = 19.0
+offset_right = -262.0
+offset_bottom = 176.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_g52ua")
+
+[node name="BheemCharacter" type="TextureRect" parent="UI" unique_id=1314283657]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 208.0
+offset_top = -165.0
+offset_right = 686.0
+offset_bottom = 307.0
+grow_vertical = 2
+texture = ExtResource("4_v2kt0")
+
+[node name="DialogBox" type="TextureRect" parent="UI/BheemCharacter" unique_id=986603285]
+layout_mode = 1
+offset_left = -166.0
+offset_top = -74.0
+offset_right = 94.0
+offset_bottom = 143.0
+texture = ExtResource("5_yvop4")
+
+[node name="JagguCharacter" type="TextureRect" parent="UI" unique_id=1797071443]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -587.0
+offset_top = -97.0
+offset_right = -82.0
+offset_bottom = 330.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("5_gxxow")
+
+[node name="Carpet" type="TextureRect" parent="UI" unique_id=755137061]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -734.0
+offset_top = -309.0
+offset_right = 703.0
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("6_3v7gc")
+
+[node name="LeftSideLaddoo" type="TextureRect" parent="UI" unique_id=672300735]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+texture = ExtResource("4_oppcp")
+
+[node name="RightSideLaddoo" type="TextureRect" parent="UI" unique_id=530152660]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -339.0
+offset_top = -275.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("5_jcqdb")
+
+[node name="BannerGroundMiddle" type="TextureRect" parent="UI" unique_id=189719091]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -188.0
+offset_top = -192.0
+offset_right = 192.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("7_v2kt0")
+
+[node name="Plate" type="TextureRect" parent="UI" unique_id=1645839410]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -317.0
+offset_top = -397.0
+offset_right = 381.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("8_jcqdb")
+
+[node name="CircleDots" type="TextureRect" parent="UI/Plate" unique_id=687625527]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 31.0
+offset_right = 275.0
+offset_bottom = 169.0
+texture = ExtResource("9_3v7gc")
+
+[node name="CircleDots2" type="TextureRect" parent="UI/Plate" unique_id=630803109]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 28.0
+offset_right = 438.0
+offset_bottom = 166.0
+texture = ExtResource("9_3v7gc")
+
+[node name="CircleDots3" type="TextureRect" parent="UI/Plate" unique_id=1401001425]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 26.0
+offset_right = 608.0
+offset_bottom = 164.0
+texture = ExtResource("9_3v7gc")
+
+[node name="LaddooInSidePlate" type="TextureRect" parent="UI/Plate" unique_id=991408092]
+visible = false
+layout_mode = 0
+offset_left = 89.0
+offset_top = -3.0
+offset_right = 289.0
+offset_bottom = 194.0
+texture = ExtResource("15_pjkk2")
+
+[node name="LaddooInSidePlateTwo" type="TextureRect" parent="UI/Plate" unique_id=1923849925]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -124.5
+offset_right = 111.0
+offset_bottom = 72.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_pjkk2")
+
+[node name="LaddooInSidePlateThree" type="TextureRect" parent="UI/Plate" unique_id=1929231494]
+visible = false
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -127.5
+offset_right = -60.0
+offset_bottom = 69.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_i4w0e")
+
+[node name="Banner" type="TextureRect" parent="UI" unique_id=1446764179]
+offset_left = 43.0
+offset_top = 13.0
+offset_right = 581.0
+offset_bottom = 268.0
+texture = ExtResource("12_t56vi")
+
+[node name="BannerTextBoard" type="TextureRect" parent="UI/Banner" unique_id=1099020759]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -134.5
+offset_right = 240.0
+offset_bottom = 134.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_yvop4")
+
+[node name="LaddooOutSidePlate" type="TextureButton" parent="UI" unique_id=1187371336]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -277.0
+offset_top = -168.0
+offset_right = -77.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("15_pjkk2")
+
+[node name="LaddooOutSidePlateTwo" type="TextureButton" parent="UI" unique_id=2088423625]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -209.0
+offset_right = 132.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("CompressedTexture2D_jvi7i")
+
+[node name="LaddooOutSideThree" type="TextureButton" parent="UI" unique_id=246650715]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 143.0
+offset_top = -168.0
+offset_right = 343.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("CompressedTexture2D_ucdao")
+
+[node name="BannerSoundOne" type="AudioStreamPlayer" parent="." unique_id=1539705008]
+stream = ExtResource("17_ucdao")
+
+[node name="BannerSoundTwo" type="AudioStreamPlayer" parent="." unique_id=2000071677]
+stream = ExtResource("18_xuapl")
+
+[node name="DialogSound" type="AudioStreamPlayer" parent="." unique_id=1555065924]
+stream = ExtResource("19_digdc")
+
+[node name="PressedSound" type="AudioStreamPlayer" parent="." unique_id=689714413]
+stream = ExtResource("20_uxg1n")
+
+[node name="RightAnswer" type="AudioStreamPlayer" parent="." unique_id=1314401294]
+stream = ExtResource("21_20l4i")
+
+[node name="WrongAnswer" type="AudioStreamPlayer" parent="." unique_id=1569978230]
+stream = ExtResource("22_sidyj")
+
+[connection signal="pressed" from="UI/SoundButton" to="." method="_on_sound_button_pressed"]
+[connection signal="pressed" from="UI/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="UI/LaddooOutSidePlate" to="." method="_on_laddoo_out_side_plate_pressed"]
+[connection signal="pressed" from="UI/LaddooOutSidePlateTwo" to="." method="_on_laddoo_out_side_plate_two_pressed"]
+[connection signal="pressed" from="UI/LaddooOutSideThree" to="." method="_on_laddoo_out_side_three_pressed"]

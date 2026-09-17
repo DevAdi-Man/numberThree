@@ -1,0 +1,306 @@
+[gd_scene format=3 uid="uid://bpgin167veie6"]
+
+[ext_resource type="Texture2D" uid="uid://xhn3gr4a2n4f" path="res://assets/firstscene/background.png" id="1_4q34w"]
+[ext_resource type="Script" uid="uid://dp01jcoecilm6" path="res://scene/first_scene.gd" id="1_ldip2"]
+[ext_resource type="Texture2D" uid="uid://dp73qcnt8yhg4" path="res://assets/UI/SoundButton.png" id="2_q77l7"]
+[ext_resource type="Texture2D" uid="uid://dt2hm3t80uhnd" path="res://assets/UI/HomeButton.png" id="3_mnmx3"]
+[ext_resource type="Texture2D" uid="uid://765m3fxxnung" path="res://assets/firstscene/lamp.png" id="4_1pv4f"]
+[ext_resource type="Texture2D" uid="uid://cl1li281p8ton" path="res://assets/firstscene/BannerRightSide.png" id="4_85dgi"]
+[ext_resource type="Texture2D" uid="uid://d2tfatgwdows5" path="res://assets/firstscene/flowerLeftSide.png" id="4_mnmx3"]
+[ext_resource type="Texture2D" uid="uid://bio50us1bbb5w" path="res://assets/UI/MuteIcon.png" id="4_w7qk3"]
+[ext_resource type="Texture2D" uid="uid://bu577t48etgpw" path="res://assets/firstscene/flowerRightSide.png" id="5_85dgi"]
+[ext_resource type="Texture2D" uid="uid://cdllhmnit3ulg" path="res://assets/firstscene/bheemCharacter.png" id="6_u1suu"]
+[ext_resource type="Texture2D" uid="uid://yvqn1xit4wms" path="res://assets/firstscene/dialogBox2.png" id="7_ftwor"]
+[ext_resource type="Texture2D" uid="uid://v183v701hs7l" path="res://assets/firstscene/chutkiCharacter.png" id="7_ljqo3"]
+[ext_resource type="Texture2D" uid="uid://behp2gwuklkp1" path="res://assets/firstscene/dialogBox1.png" id="9_u1duh"]
+[ext_resource type="Texture2D" uid="uid://bepoi8ka1l1nc" path="res://assets/firstscene/TapBanner.png" id="10_chgh2"]
+[ext_resource type="Texture2D" uid="uid://c7ki14iiorjyw" path="res://assets/firstscene/One.png" id="11_a5prc"]
+[ext_resource type="Texture2D" uid="uid://cgh3y4dq84dsk" path="res://assets/firstscene/two.png" id="12_ftwor"]
+[ext_resource type="Texture2D" uid="uid://p25ame4odiwx" path="res://assets/firstscene/three.png" id="13_u1duh"]
+[ext_resource type="Texture2D" uid="uid://dgqarf8r0ucie" path="res://assets/firstscene/BellOne.png" id="16_u1duh"]
+[ext_resource type="Texture2D" uid="uid://dbf4gc81cy7ne" path="res://assets/firstscene/BellTwo.png" id="17_w437y"]
+[ext_resource type="Texture2D" uid="uid://bscjh3cqh7a3q" path="res://assets/firstscene/BellThreeHidden.png" id="18_jupnx"]
+[ext_resource type="Texture2D" uid="uid://of0ug8wsa34o" path="res://assets/firstscene/Hidden.png" id="19_6a24q"]
+[ext_resource type="Texture2D" uid="uid://bf7lxq1prd6g2" path="res://assets/firstscene/BellThree.png" id="20_6a24q"]
+[ext_resource type="AudioStream" uid="uid://bt3ejadw17lwx" path="res://assets/sound/button2.wav" id="22_4u3h6"]
+[ext_resource type="AudioStream" uid="uid://dnu68itabrn78" path="res://assets/sound/answer.mp3" id="23_oqhl5"]
+[ext_resource type="AudioStream" uid="uid://dfmbcriuysk6u" path="res://assets/sound/wrong_answer.mp3" id="24_8qa3u"]
+[ext_resource type="AudioStream" uid="uid://d3jscbmfu70pr" path="res://assets/sound/One.mp3" id="25_60qi0"]
+[ext_resource type="AudioStream" uid="uid://dfuaid7we3uvm" path="res://assets/sound/Two.mp3" id="26_mkwlw"]
+[ext_resource type="AudioStream" uid="uid://d7nwlliyn4j0" path="res://assets/sound/Three.mp3" id="27_7q6ub"]
+[ext_resource type="AudioStream" uid="uid://8ektbgfwkmvg" path="res://assets/sound/FirstScreenSound.mp3" id="28_7q6ub"]
+[ext_resource type="AudioStream" uid="uid://bnh182lg2ayyv" path="res://assets/sound/firstScreenSecondSound.mp3" id="29_w7qk3"]
+
+[node name="FirstScene" type="Node2D" unique_id=1287180234]
+script = ExtResource("1_ldip2")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1632750759]
+
+[node name="Background" type="TextureRect" parent="UI" unique_id=774815603]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4q34w")
+
+[node name="SoundButton" type="TextureButton" parent="UI" unique_id=583308652]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -250.0
+offset_top = 19.0
+offset_right = -110.0
+offset_bottom = 157.0
+grow_horizontal = 0
+toggle_mode = true
+texture_normal = ExtResource("2_q77l7")
+texture_pressed = ExtResource("4_w7qk3")
+
+[node name="HomeButton" type="TextureButton" parent="UI" unique_id=2049283108]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -402.0
+offset_top = 19.0
+offset_right = -262.0
+offset_bottom = 176.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_mnmx3")
+
+[node name="Lamp" type="TextureRect" parent="UI" unique_id=609285036]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -314.0
+offset_top = -477.0
+offset_right = -134.0
+offset_bottom = -25.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_1pv4f")
+
+[node name="RightSideBanner" type="TextureRect" parent="UI" unique_id=2041362140]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -280.0
+offset_top = -346.0
+offset_right = -41.0
+offset_bottom = -71.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("4_85dgi")
+
+[node name="BheemCharacter" type="TextureRect" parent="UI" unique_id=372635773]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -606.0
+offset_top = -469.0
+offset_right = -267.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("6_u1suu")
+
+[node name="DialogBoxTwo" type="TextureRect" parent="UI/BheemCharacter" unique_id=613976847]
+layout_mode = 1
+offset_left = -7.0
+offset_top = -186.0
+offset_right = 313.0
+offset_bottom = 50.0
+texture = ExtResource("7_ftwor")
+
+[node name="ChurkiCharacter" type="TextureRect" parent="UI" unique_id=948741240]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -532.0
+offset_right = 350.0
+offset_bottom = -61.0
+grow_vertical = 0
+texture = ExtResource("7_ljqo3")
+
+[node name="DialogBoxOne" type="TextureRect" parent="UI/ChurkiCharacter" unique_id=2577167]
+layout_mode = 0
+offset_left = 19.0
+offset_top = -200.0
+offset_right = 319.0
+offset_bottom = 17.0
+texture = ExtResource("9_u1duh")
+
+[node name="leftSideGround" type="TextureRect" parent="UI" unique_id=1670065375]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -314.0
+offset_right = 461.0
+grow_vertical = 0
+texture = ExtResource("4_mnmx3")
+
+[node name="RightSideGround" type="TextureRect" parent="UI" unique_id=1433544422]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -481.0
+offset_top = -186.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("5_85dgi")
+
+[node name="Banner" type="TextureRect" parent="UI" unique_id=1000697088]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -246.0
+offset_top = -374.0
+offset_right = 353.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("10_chgh2")
+
+[node name="One" type="TextureButton" parent="UI/Banner" unique_id=643672354]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -185.0
+offset_right = 204.0
+offset_bottom = -2.0
+grow_vertical = 0
+texture_normal = ExtResource("11_a5prc")
+
+[node name="Two" type="TextureButton" parent="UI/Banner" unique_id=633084369]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.5
+offset_top = -66.0
+offset_right = 83.5
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("12_ftwor")
+
+[node name="Three" type="TextureButton" parent="UI/Banner" unique_id=1089231354]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -198.0
+offset_top = -61.0
+offset_right = -18.0
+offset_bottom = 119.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("13_u1duh")
+
+[node name="BellOne" type="TextureRect" parent="UI" unique_id=634399751]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -371.0
+offset_top = 21.0
+offset_right = -71.0
+offset_bottom = 553.0
+grow_horizontal = 2
+texture = ExtResource("16_u1duh")
+
+[node name="BellTwo" type="TextureRect" parent="UI" unique_id=251667854]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_top = 27.0
+offset_right = 183.0
+offset_bottom = 559.0
+grow_horizontal = 2
+texture = ExtResource("17_w437y")
+
+[node name="BellThreeHidden" type="TextureRect" parent="UI" unique_id=114877589]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 207.0
+offset_top = 21.0
+offset_right = 367.0
+offset_bottom = 316.0
+grow_horizontal = 2
+texture = ExtResource("18_jupnx")
+
+[node name="HiddenBell" type="TextureRect" parent="UI/BellThreeHidden" unique_id=475586329]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -131.0
+offset_top = -42.0
+offset_right = 149.0
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("19_6a24q")
+
+[node name="BellThreeUnHidden" type="TextureRect" parent="UI" unique_id=194947010]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 132.0
+offset_top = 19.0
+offset_right = 432.0
+offset_bottom = 553.0
+grow_horizontal = 2
+texture = ExtResource("20_6a24q")
+
+[node name="PressedSound" type="AudioStreamPlayer" parent="." unique_id=1352661477]
+stream = ExtResource("22_4u3h6")
+
+[node name="RightAnswer" type="AudioStreamPlayer" parent="." unique_id=1864575998]
+stream = ExtResource("23_oqhl5")
+
+[node name="WrongAnswer" type="AudioStreamPlayer" parent="." unique_id=571444500]
+stream = ExtResource("24_8qa3u")
+
+[node name="OneSound" type="AudioStreamPlayer" parent="." unique_id=375081950]
+stream = ExtResource("25_60qi0")
+
+[node name="TwoSound" type="AudioStreamPlayer" parent="." unique_id=1757477289]
+stream = ExtResource("26_mkwlw")
+
+[node name="ThreeSound" type="AudioStreamPlayer" parent="." unique_id=1749500896]
+stream = ExtResource("27_7q6ub")
+
+[node name="DialogBoxOneSound" type="AudioStreamPlayer" parent="." unique_id=561412668]
+stream = ExtResource("28_7q6ub")
+
+[node name="DialogBoxSecondSound" type="AudioStreamPlayer" parent="." unique_id=1123786055]
+stream = ExtResource("29_w7qk3")
+
+[connection signal="pressed" from="UI/SoundButton" to="." method="_on_sound_button_pressed"]
+[connection signal="pressed" from="UI/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="UI/Banner/One" to="." method="_on_one_pressed"]
+[connection signal="pressed" from="UI/Banner/Two" to="." method="_on_two_pressed"]
+[connection signal="pressed" from="UI/Banner/Three" to="." method="_on_three_pressed"]

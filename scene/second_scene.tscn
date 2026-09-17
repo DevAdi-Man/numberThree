@@ -1,0 +1,224 @@
+[gd_scene format=3 uid="uid://dei761xidkb8m"]
+
+[ext_resource type="Texture2D" uid="uid://c1ley8ypr227m" path="res://assets/secondScene/background.png" id="1_m8hce"]
+[ext_resource type="Script" uid="uid://xtaey2bo8evu" path="res://scene/second_scene.gd" id="1_meaur"]
+[ext_resource type="Texture2D" uid="uid://dp73qcnt8yhg4" path="res://assets/UI/SoundButton.png" id="2_m6yuo"]
+[ext_resource type="Texture2D" uid="uid://dt2hm3t80uhnd" path="res://assets/UI/HomeButton.png" id="3_cxfeu"]
+[ext_resource type="Texture2D" uid="uid://bgg8mi5ullm5h" path="res://assets/secondScene/Banner.png" id="4_acmiu"]
+[ext_resource type="Texture2D" uid="uid://bio50us1bbb5w" path="res://assets/UI/MuteIcon.png" id="4_akyot"]
+[ext_resource type="FontFile" uid="uid://d3sehhhvmoeq4" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="5_3pria"]
+[ext_resource type="Texture2D" uid="uid://b1p4hujcwj6iy" path="res://assets/secondScene/jagguCharacter.png" id="6_m6yuo"]
+[ext_resource type="Texture2D" uid="uid://c7nucg1jahvup" path="res://assets/secondScene/BheemCharacter.png" id="7_3pria"]
+[ext_resource type="Texture2D" uid="uid://cvboiydjj0rcf" path="res://assets/secondScene/leftSideFlower.png" id="8_622hk"]
+[ext_resource type="Texture2D" uid="uid://curqvj5luvq1d" path="res://assets/secondScene/rightSideFlower.png" id="9_no0n8"]
+[ext_resource type="Texture2D" uid="uid://c0ld22nedxlgc" path="res://assets/secondScene/Cow.png" id="10_mdte8"]
+[ext_resource type="Texture2D" uid="uid://repf76f2x4n2" path="res://assets/secondScene/Bag.png" id="11_meaur"]
+[ext_resource type="Texture2D" uid="uid://mx6njowps71f" path="res://assets/secondScene/choclate.png" id="12_dau1o"]
+[ext_resource type="AudioStream" uid="uid://bt3ejadw17lwx" path="res://assets/sound/button2.wav" id="14_7vqxn"]
+[ext_resource type="AudioStream" uid="uid://dnu68itabrn78" path="res://assets/sound/answer.mp3" id="15_rmj68"]
+[ext_resource type="AudioStream" uid="uid://dfmbcriuysk6u" path="res://assets/sound/wrong_answer.mp3" id="16_copxf"]
+[ext_resource type="AudioStream" uid="uid://b3pye86pljklu" path="res://assets/sound/secondScreenFirstSound.mp3" id="18_akyot"]
+[ext_resource type="AudioStream" uid="uid://cgehfxtok7wev" path="res://assets/sound/secondScreenSecondSound.mp3" id="19_skov8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v8qb6"]
+font = ExtResource("5_3pria")
+font_size = 56
+font_color = Color(0.32156864, 0.13333334, 0.07058824, 1)
+outline_size = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_7bvtv"]
+font = ExtResource("5_3pria")
+font_size = 78
+font_color = Color(0.88235295, 0.26666668, 0.105882354, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oklu1"]
+font = ExtResource("5_3pria")
+font_size = 34
+font_color = Color(0.32156864, 0.13333334, 0.07058824, 1)
+
+[node name="SecondScene" type="Node2D" unique_id=1948945809]
+script = ExtResource("1_meaur")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=326011428]
+
+[node name="Background" type="TextureRect" parent="UI" unique_id=755879075]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_m8hce")
+
+[node name="SoundButton" type="TextureButton" parent="UI" unique_id=911135780]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -250.0
+offset_top = 19.0
+offset_right = -110.0
+offset_bottom = 157.0
+grow_horizontal = 0
+toggle_mode = true
+texture_normal = ExtResource("2_m6yuo")
+texture_pressed = ExtResource("4_akyot")
+
+[node name="HomeButton" type="TextureButton" parent="UI" unique_id=21230003]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -402.0
+offset_top = 19.0
+offset_right = -262.0
+offset_bottom = 176.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_cxfeu")
+
+[node name="Banner" type="TextureRect" parent="UI" unique_id=1309061679]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -379.0
+offset_right = 379.0
+offset_bottom = 393.0
+grow_horizontal = 2
+texture = ExtResource("4_acmiu")
+
+[node name="QuestionTitle" type="Label" parent="UI/Banner" unique_id=595915357]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -73.5
+offset_right = 230.0
+offset_bottom = -16.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Which group has"
+label_settings = SubResource("LabelSettings_v8qb6")
+
+[node name="ThreeNumber" type="Label" parent="UI/Banner" unique_id=454101262]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -10.5
+offset_right = 107.0
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "THREE?"
+label_settings = SubResource("LabelSettings_7bvtv")
+
+[node name="Instruction" type="Label" parent="UI/Banner" unique_id=1805750223]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -69.0
+offset_right = 157.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Tap the right one"
+label_settings = SubResource("LabelSettings_oklu1")
+
+[node name="JaguuCharacter" type="TextureRect" parent="UI" unique_id=1635337032]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -121.0
+offset_right = 4.0
+offset_bottom = 154.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("6_m6yuo")
+
+[node name="BheemCharacter" type="TextureRect" parent="UI" unique_id=1573447782]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -631.0
+offset_right = 437.0
+offset_bottom = -3.0
+grow_vertical = 0
+texture = ExtResource("7_3pria")
+
+[node name="LeftSideFlower" type="TextureRect" parent="UI" unique_id=780964674]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -197.0
+offset_right = 259.0
+grow_vertical = 0
+texture = ExtResource("8_622hk")
+
+[node name="RightSideFlower" type="TextureRect" parent="UI" unique_id=522651789]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -279.0
+offset_top = -197.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("9_no0n8")
+
+[node name="BoxContainer" type="BoxContainer" parent="UI" unique_id=2127089564]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -564.0
+offset_top = -483.0
+offset_right = 702.0
+offset_bottom = -149.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CowButton" type="TextureButton" parent="UI/BoxContainer" unique_id=582074419]
+layout_mode = 2
+texture_normal = ExtResource("10_mdte8")
+
+[node name="BagButton" type="TextureButton" parent="UI/BoxContainer" unique_id=1565061358]
+layout_mode = 2
+texture_normal = ExtResource("11_meaur")
+
+[node name="CandyButton" type="TextureButton" parent="UI/BoxContainer" unique_id=437785560]
+layout_mode = 2
+texture_normal = ExtResource("12_dau1o")
+
+[node name="PressedSound" type="AudioStreamPlayer" parent="." unique_id=391743241]
+stream = ExtResource("14_7vqxn")
+
+[node name="RightAnswer" type="AudioStreamPlayer" parent="." unique_id=564646448]
+stream = ExtResource("15_rmj68")
+
+[node name="WrongAnswer" type="AudioStreamPlayer" parent="." unique_id=954192766]
+stream = ExtResource("16_copxf")
+
+[node name="BannerSoundOne" type="AudioStreamPlayer" parent="." unique_id=1862677556]
+stream = ExtResource("18_akyot")
+
+[node name="BannerSoundTwo" type="AudioStreamPlayer" parent="." unique_id=1918382565]
+stream = ExtResource("19_skov8")
+
+[connection signal="pressed" from="UI/SoundButton" to="." method="_on_sound_button_pressed"]
+[connection signal="pressed" from="UI/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="UI/BoxContainer/CowButton" to="." method="_on_cow_button_pressed"]
+[connection signal="pressed" from="UI/BoxContainer/BagButton" to="." method="_on_bag_button_pressed"]
+[connection signal="pressed" from="UI/BoxContainer/CandyButton" to="." method="_on_candy_button_pressed"]
