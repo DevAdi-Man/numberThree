@@ -62,7 +62,7 @@ toggle_mode = true
 texture_normal = ExtResource("2_hya0o")
 texture_pressed = ExtResource("4_20l4i")
 
-[node name="HomeButton" type="TextureButton" parent="UI" unique_id=43669588]
+[node name="BackButton" type="TextureButton" parent="UI" unique_id=43669588]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -320,7 +320,7 @@ stream = ExtResource("21_20l4i")
 stream = ExtResource("22_sidyj")
 
 [connection signal="pressed" from="UI/SoundButton" to="." method="_on_sound_button_pressed"]
-[connection signal="pressed" from="UI/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="UI/BackButton" to="." method="_on_home_button_pressed"]
 [connection signal="pressed" from="UI/LaddooOutSidePlate" to="." method="_on_laddoo_out_side_plate_pressed"]
 [connection signal="pressed" from="UI/LaddooOutSidePlateTwo" to="." method="_on_laddoo_out_side_plate_two_pressed"]
 [connection signal="pressed" from="UI/LaddooOutSideThree" to="." method="_on_laddoo_out_side_three_pressed"]

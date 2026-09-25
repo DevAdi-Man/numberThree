@@ -19,8 +19,9 @@ extends Node2D
 @onready var laddoo_in_side_plate_two: TextureRect = $UI/Plate/LaddooInSidePlateTwo
 @onready var laddoo_in_side_plate_three: TextureRect = $UI/Plate/LaddooInSidePlateThree
 
+@onready var back_button: TextureButton = $UI/BackButton
+
 @onready var sound_button: TextureButton = $UI/SoundButton
-@onready var home_button: TextureButton = $UI/HomeButton
 @onready var banner_text_board: TextureRect = $UI/Banner/BannerTextBoard
 @onready var dialog_box: TextureRect = $UI/BheemCharacter/DialogBox
 
@@ -83,6 +84,13 @@ func _place_next_laddoo(clicked_button: TextureButton) -> void:
 	if is_busy or placed_count >= TOTAL_LADDOOS:
 		return # plate already full ya intro chal raha hai
 
+	_set_laddoos_disabled(true)
+
+	var target_pos = circle_dots_list[placed_count].global_position
+	var tween = create_tween()
+	tween.tween_property(clicked_button, "global_position", target_pos, 0.4).set_trans(Tween.TRANS_SINE)
+	await tween.finished
+
 	# jo bhi button click hua sirf wahi disappear hoga
 	clicked_button.visible = false
 
@@ -94,6 +102,8 @@ func _place_next_laddoo(clicked_button: TextureButton) -> void:
 
 	if placed_count >= TOTAL_LADDOOS:
 		await _on_plate_complete()
+	else:
+		_set_laddoos_disabled(false)
 
 
 func _on_plate_complete() -> void:
@@ -131,5 +141,5 @@ func _on_sound_button_pressed() -> void:
 
 func _on_home_button_pressed() -> void:
 	pressed_sound.play()
-	MusicManager.splash_icon(home_button)
-	get_tree().change_scene_to_file("res://scene/main.tscn")
+	MusicManager.splash_icon(back_button)
+	get_tree().change_scene_to_file("res://scene/second_scene.tscn")

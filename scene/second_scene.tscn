@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://c1ley8ypr227m" path="res://assets/secondScene/background.png" id="1_m8hce"]
 [ext_resource type="Script" uid="uid://xtaey2bo8evu" path="res://scene/second_scene.gd" id="1_meaur"]
 [ext_resource type="Texture2D" uid="uid://dp73qcnt8yhg4" path="res://assets/UI/SoundButton.png" id="2_m6yuo"]
-[ext_resource type="Texture2D" uid="uid://dt2hm3t80uhnd" path="res://assets/UI/HomeButton.png" id="3_cxfeu"]
 [ext_resource type="Texture2D" uid="uid://bgg8mi5ullm5h" path="res://assets/secondScene/Banner.png" id="4_acmiu"]
 [ext_resource type="Texture2D" uid="uid://bio50us1bbb5w" path="res://assets/UI/MuteIcon.png" id="4_akyot"]
 [ext_resource type="FontFile" uid="uid://d3sehhhvmoeq4" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="5_3pria"]
+[ext_resource type="Texture2D" uid="uid://ciy4e15j2mice" path="res://assets/UI/BackButton.png" id="5_akyot"]
 [ext_resource type="Texture2D" uid="uid://b1p4hujcwj6iy" path="res://assets/secondScene/jagguCharacter.png" id="6_m6yuo"]
 [ext_resource type="Texture2D" uid="uid://c7nucg1jahvup" path="res://assets/secondScene/BheemCharacter.png" id="7_3pria"]
 [ext_resource type="Texture2D" uid="uid://cvboiydjj0rcf" path="res://assets/secondScene/leftSideFlower.png" id="8_622hk"]
@@ -62,16 +62,12 @@ toggle_mode = true
 texture_normal = ExtResource("2_m6yuo")
 texture_pressed = ExtResource("4_akyot")
 
-[node name="HomeButton" type="TextureButton" parent="UI" unique_id=21230003]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -402.0
-offset_top = 19.0
-offset_right = -262.0
-offset_bottom = 176.0
-grow_horizontal = 0
-texture_normal = ExtResource("3_cxfeu")
+[node name="BackButton" type="TextureButton" parent="UI" unique_id=21230003]
+offset_left = 81.0
+offset_top = 37.0
+offset_right = 221.0
+offset_bottom = 194.0
+texture_normal = ExtResource("5_akyot")
 
 [node name="Banner" type="TextureRect" parent="UI" unique_id=1309061679]
 anchors_preset = 5
@@ -218,7 +214,7 @@ stream = ExtResource("18_akyot")
 stream = ExtResource("19_skov8")
 
 [connection signal="pressed" from="UI/SoundButton" to="." method="_on_sound_button_pressed"]
-[connection signal="pressed" from="UI/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="UI/BackButton" to="." method="_on_home_button_pressed"]
 [connection signal="pressed" from="UI/BoxContainer/CowButton" to="." method="_on_cow_button_pressed"]
 [connection signal="pressed" from="UI/BoxContainer/BagButton" to="." method="_on_bag_button_pressed"]
 [connection signal="pressed" from="UI/BoxContainer/CandyButton" to="." method="_on_candy_button_pressed"]

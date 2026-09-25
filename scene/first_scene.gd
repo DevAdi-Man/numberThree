@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var sound_button: TextureButton = $UI/SoundButton
-@onready var home_button: TextureButton = $UI/HomeButton
+@onready var back_button: TextureButton = $UI/BackButton
 
 @onready var pressed_sound: AudioStreamPlayer = $PressedSound
 @onready var right_answer: AudioStreamPlayer = $RightAnswer
@@ -71,7 +71,7 @@ func _on_sound_button_pressed() -> void:
 
 func _on_home_button_pressed() -> void:
 	pressed_sound.play()
-	MusicManager.splash_icon(home_button)
+	MusicManager.splash_icon(back_button)
 	get_tree().change_scene_to_file("res://scene/main.tscn")
 
 
