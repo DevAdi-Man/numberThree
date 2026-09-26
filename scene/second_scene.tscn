@@ -198,6 +198,24 @@ texture_normal = ExtResource("11_meaur")
 layout_mode = 2
 texture_normal = ExtResource("12_dau1o")
 
+[node name="NextButton" type="TextureButton" parent="UI" unique_id=1656259078]
+custom_minimum_size = Vector2(130, 130)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -180.0
+offset_right = -120.0
+offset_bottom = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("5_akyot")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
 [node name="PressedSound" type="AudioStreamPlayer" parent="." unique_id=391743241]
 stream = ExtResource("14_7vqxn")
 
@@ -218,3 +236,4 @@ stream = ExtResource("19_skov8")
 [connection signal="pressed" from="UI/BoxContainer/CowButton" to="." method="_on_cow_button_pressed"]
 [connection signal="pressed" from="UI/BoxContainer/BagButton" to="." method="_on_bag_button_pressed"]
 [connection signal="pressed" from="UI/BoxContainer/CandyButton" to="." method="_on_candy_button_pressed"]
+[connection signal="pressed" from="UI/NextButton" to="." method="_on_next_button_pressed"]

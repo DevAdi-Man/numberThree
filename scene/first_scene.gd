@@ -26,6 +26,7 @@ extends Node2D
 @onready var dialog_box_second_sound: AudioStreamPlayer = $DialogBoxSecondSound
 
 
+
 var is_busy := false
 
 
@@ -114,7 +115,12 @@ func _on_three_pressed() -> void:
 	await three_sound.finished
 	right_answer.play()
 	await right_answer.finished
-
-	_set_numbers_disabled(false)
-	get_tree().change_scene_to_file("res://scene/second_scene.tscn")
 	
+	
+	_set_numbers_disabled(false)
+	
+	
+
+
+func _on_next_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scene/second_scene.tscn")

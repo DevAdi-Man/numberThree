@@ -272,6 +272,24 @@ offset_bottom = 553.0
 grow_horizontal = 2
 texture = ExtResource("20_6a24q")
 
+[node name="NextButton" type="TextureButton" parent="UI" unique_id=1918572754]
+custom_minimum_size = Vector2(130, 130)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -203.0
+offset_top = -173.0
+offset_right = -73.0
+offset_bottom = -43.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("3_w7qk3")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
 [node name="PressedSound" type="AudioStreamPlayer" parent="." unique_id=1352661477]
 stream = ExtResource("22_4u3h6")
 
@@ -301,3 +319,4 @@ stream = ExtResource("29_w7qk3")
 [connection signal="pressed" from="UI/Banner/One" to="." method="_on_one_pressed"]
 [connection signal="pressed" from="UI/Banner/Two" to="." method="_on_two_pressed"]
 [connection signal="pressed" from="UI/Banner/Three" to="." method="_on_three_pressed"]
+[connection signal="pressed" from="UI/NextButton" to="." method="_on_next_button_pressed"]

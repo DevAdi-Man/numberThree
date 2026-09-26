@@ -76,7 +76,7 @@ func _on_candy_button_pressed() -> void:
 	MusicManager.scale_up_and_back(candy_button)
 	right_answer.play()
 	await right_answer.finished
-	get_tree().change_scene_to_file("res://scene/third_scene.tscn")
+	
 
 
 func _on_home_button_pressed() -> void:
@@ -102,3 +102,7 @@ func shake_node(node: TextureButton, strength: float = 10.0, duration: float = 0
 		tween.tween_property(node, "position", original_position + offset, duration / shakes)
 
 	tween.tween_property(node, "position", original_position, duration / shakes)
+
+
+func _on_next_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scene/third_scene.tscn")

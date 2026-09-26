@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://d3h1jfnnj5dvx" path="res://assets/thirdScreen/BackgroundFour.png" id="1_4qamn"]
 [ext_resource type="Script" uid="uid://srrvf84vrliv" path="res://scene/third_scene.gd" id="1_i4w0e"]
 [ext_resource type="Texture2D" uid="uid://dp73qcnt8yhg4" path="res://assets/UI/SoundButton.png" id="2_hya0o"]
-[ext_resource type="Texture2D" uid="uid://dt2hm3t80uhnd" path="res://assets/UI/HomeButton.png" id="3_g52ua"]
 [ext_resource type="Texture2D" uid="uid://bio50us1bbb5w" path="res://assets/UI/MuteIcon.png" id="4_20l4i"]
 [ext_resource type="Texture2D" uid="uid://du3cao3jl1yc7" path="res://assets/thirdScreen/third.png" id="4_oppcp"]
 [ext_resource type="Texture2D" uid="uid://mq1s7o3ffksc" path="res://assets/thirdScreen/thirdBheemCharacter.png" id="4_v2kt0"]
@@ -18,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cemjv4slr3as2" path="res://assets/thirdScreen/Banner.png" id="13_yvop4"]
 [ext_resource type="Texture2D" uid="uid://dmudt55lja4sr" path="res://assets/thirdScreen/laddoo.png" id="15_pjkk2"]
 [ext_resource type="AudioStream" uid="uid://d3pt1ba7yjlhg" path="res://assets/sound/thirdScreenFirstSound.mp3" id="17_ucdao"]
+[ext_resource type="Texture2D" uid="uid://ciy4e15j2mice" path="res://assets/UI/BackButton.png" id="18_sidyj"]
 [ext_resource type="AudioStream" uid="uid://dwax44ahntuh1" path="res://assets/sound/thirdScreenSecondSound.mp3" id="18_xuapl"]
 [ext_resource type="AudioStream" uid="uid://b3h8xsi6gdjeo" path="res://assets/sound/thirdScreenThirdSound.mp3" id="19_digdc"]
 [ext_resource type="AudioStream" uid="uid://bt3ejadw17lwx" path="res://assets/sound/button2.wav" id="20_uxg1n"]
@@ -63,15 +63,14 @@ texture_normal = ExtResource("2_hya0o")
 texture_pressed = ExtResource("4_20l4i")
 
 [node name="BackButton" type="TextureButton" parent="UI" unique_id=43669588]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -402.0
-offset_top = 19.0
-offset_right = -262.0
-offset_bottom = 176.0
-grow_horizontal = 0
-texture_normal = ExtResource("3_g52ua")
+custom_minimum_size = Vector2(130, 130)
+offset_left = 39.0
+offset_top = 49.0
+offset_right = 169.0
+offset_bottom = 179.0
+texture_normal = ExtResource("18_sidyj")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="BheemCharacter" type="TextureRect" parent="UI" unique_id=1314283657]
 anchors_preset = 8
@@ -238,9 +237,9 @@ grow_vertical = 2
 texture = SubResource("CompressedTexture2D_i4w0e")
 
 [node name="Banner" type="TextureRect" parent="UI" unique_id=1446764179]
-offset_left = 43.0
+offset_left = 209.0
 offset_top = 13.0
-offset_right = 581.0
+offset_right = 747.0
 offset_bottom = 268.0
 texture = ExtResource("12_t56vi")
 
@@ -301,6 +300,24 @@ grow_horizontal = 2
 grow_vertical = 2
 texture_normal = SubResource("CompressedTexture2D_ucdao")
 
+[node name="NextButton" type="TextureButton" parent="UI" unique_id=920246583]
+custom_minimum_size = Vector2(130, 130)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -253.0
+offset_top = -183.0
+offset_right = -115.0
+offset_bottom = -43.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("18_sidyj")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
 [node name="BannerSoundOne" type="AudioStreamPlayer" parent="." unique_id=1539705008]
 stream = ExtResource("17_ucdao")
 
@@ -324,3 +341,4 @@ stream = ExtResource("22_sidyj")
 [connection signal="pressed" from="UI/LaddooOutSidePlate" to="." method="_on_laddoo_out_side_plate_pressed"]
 [connection signal="pressed" from="UI/LaddooOutSidePlateTwo" to="." method="_on_laddoo_out_side_plate_two_pressed"]
 [connection signal="pressed" from="UI/LaddooOutSideThree" to="." method="_on_laddoo_out_side_three_pressed"]
+[connection signal="pressed" from="UI/NextButton" to="." method="_on_next_button_pressed"]

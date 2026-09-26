@@ -24,6 +24,7 @@ extends Node2D
 @onready var sound_button: TextureButton = $UI/SoundButton
 @onready var banner_text_board: TextureRect = $UI/Banner/BannerTextBoard
 @onready var dialog_box: TextureRect = $UI/BheemCharacter/DialogBox
+@onready var next_button: TextureButton = $UI/NextButton
 
 var placed_count := 0
 var is_busy := false
@@ -114,7 +115,7 @@ func _on_plate_complete() -> void:
 	await right_answer.finished
 
 	# yahan agli scene pe jaana ho to uncomment karo
-	get_tree().change_scene_to_file("res://scene/result_screen.tscn")
+	
 
 
 func _on_laddoo_out_side_plate_pressed() -> void:
@@ -143,3 +144,9 @@ func _on_home_button_pressed() -> void:
 	pressed_sound.play()
 	MusicManager.splash_icon(back_button)
 	get_tree().change_scene_to_file("res://scene/second_scene.tscn")
+
+
+func _on_next_button_pressed() -> void:
+	pressed_sound.play()
+	MusicManager.splash_icon(next_button)
+	get_tree().change_scene_to_file("res://scene/result_screen.tscn")
